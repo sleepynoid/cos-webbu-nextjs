@@ -1,64 +1,77 @@
 import { Navbar } from "@/components/navbar";
 import { CatalogGrid } from "@/components/catalog-grid";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50/50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
-      <main className="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-10 space-y-12">
-        {/* Hero Banner Placeholder */}
-        <section className="relative w-full aspect-[21/9] md:aspect-[3/1] bg-gradient-to-br from-brand/20 to-brand/5 rounded-3xl overflow-hidden flex items-center justify-center border border-brand/10">
-          <div className="text-center space-y-2">
-            <h1 className="text-3xl md:text-5xl font-black text-brand italic">Cosulagi</h1>
-            <p className="text-gray-500 text-sm md:text-base font-medium">Cosplay Marketplace Terpercaya</p>
-          </div>
+      <main className="max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-12">
+        {/* Hero Section */}
+        <section className="relative w-full aspect-[21/9] md:aspect-[3/1] rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
+          <Image 
+            src="/Hero.avif" 
+            alt="Cosulagi Hero"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Optional overlay if text is hard to read on real image, 
+              but typically Hero.avif has its own branding */}
         </section>
 
-        {/* Featured Section */}
-        <CatalogGrid />
-        
-        {/* Secondary Section (Mock) */}
-        <div className="pt-8">
-           <CatalogGrid />
-        </div>
+        {/* Sections */}
+        <CatalogGrid title="Produk Terbaru" subtitle="Koleksi kostum terbaru yang baru saja tiba" />
+        <CatalogGrid title="Bocchi The Rock!" />
+        <CatalogGrid title="Love and Deepspace" />
       </main>
 
-      {/* Footer Placeholder matching Cosulagi style */}
-      <footer className="mt-20 bg-gradient-to-b from-brand to-indigo-950 text-white py-16 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      {/* Footer */}
+      <footer className="mt-20 bg-[#3b4b9b] text-white py-12 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="text-2xl font-black italic">Cosulagi</div>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Platform sewa dan jual beli kostum cosplay terpercaya. Kami mempermudah cosplayer menemukan kostum impian.
+            <div className="text-3xl font-black italic tracking-tighter">Cosulagi<span className="text-base font-normal align-top">.id</span></div>
+            <p className="text-white/80 text-sm leading-relaxed max-w-xs">
+              Wujudin cosplan kamu tanpa ribet! Dari cari kostum karakter inceran sampai sistem sewa yang dijamin aman, Cosulagi.id hadir biar kamu bisa fokus tampil maksimal di event.
             </p>
           </div>
-          {/* Mock columns */}
+          
           <div className="space-y-4">
-            <h4 className="font-bold">Ikuti Kami</h4>
-            <div className="text-white/70 text-sm space-y-2">
-              <p>Instagram</p>
-              <p>TikTok</p>
+            <h4 className="font-bold text-lg">Ikuti Kami</h4>
+            <div className="text-white/80 text-sm flex items-center gap-2">
+               <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">IG</div>
+               <span>Instagram</span>
             </div>
           </div>
+          
           <div className="space-y-4">
-            <h4 className="font-bold">Kontak</h4>
-            <div className="text-white/70 text-sm space-y-2">
-              <p>WhatsApp: +62 812-XXXX</p>
-              <p>Email: hello@cosulagi.id</p>
+            <h4 className="font-bold text-lg">Kontak</h4>
+            <div className="text-white/80 text-sm space-y-3">
+              <p>+6289677717105</p>
+              <p>contact@cosulagi.id</p>
+              <p>085692085873</p>
             </div>
           </div>
-          <div className="space-y-4">
-            <h4 className="font-bold">Metode Pembayaran</h4>
-            <div className="grid grid-cols-4 gap-2">
-              {[...Array(8)].map((_, i) => (
-                <div key={i} className="h-8 bg-white/10 rounded" />
-              ))}
+
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h4 className="font-bold text-lg">Jasa Kirim</h4>
+              <div className="grid grid-cols-4 gap-2">
+                {[...Array(8)].map((_, i) => (
+                  <div key={`jasa-${i}`} className="h-6 bg-white/20 rounded" />
+                ))}
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-bold text-lg">Metode Pembayaran</h4>
+              <div className="grid grid-cols-4 gap-2">
+                {[...Array(8)].map((_, i) => (
+                  <div key={`bayar-${i}`} className="h-6 bg-white/20 rounded" />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 text-center text-white/50 text-xs">
-          &copy; 2024 Cosulagi. Semua hak dilindungi.
         </div>
       </footer>
     </div>

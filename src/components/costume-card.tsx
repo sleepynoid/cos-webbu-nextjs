@@ -3,7 +3,8 @@
 import { Costume } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import Image from "next/image";
 
 interface CostumeCardProps {
   costume: Costume;
@@ -14,7 +15,12 @@ export function CostumeCard({ costume }: CostumeCardProps) {
     <Card className="overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow group cursor-pointer bg-white rounded-xl">
       {/* Image Section */}
       <div className="relative aspect-square overflow-hidden bg-gray-100">
-        <div className="bg-gray-200 w-full h-full animate-pulse" />
+        <Image 
+          src={costume.image} 
+          alt={costume.name}
+          fill
+          className="object-cover transition-transform group-hover:scale-105"
+        />
       </div>
 
       {/* Content Section */}
