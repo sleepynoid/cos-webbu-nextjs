@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Cosulagi Brand Palette */
+  --color-brand: #4F46E5;
+  --color-brand-foreground: #FFFFFF;
+  
+  --color-background: #FFFFFF;
+  --color-foreground: #1F2937;
+
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1F2937;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1F2937;
+
+  --color-primary: #4F46E5;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #F3F4F6;
+  --color-secondary-foreground: #1F2937;
+
+  --color-muted: #F3F4F6;
+  --color-muted-foreground: #6B7280;
+
+  --color-accent: #F3F4F6;
+  --color-accent-foreground: #1F2937;
+
+  --color-border: #E5E7EB;
+  --color-input: #F3F4F6;
+  --color-ring: #4F46E5;
+
+  --radius-3xl: 1.5rem;
+  --radius-2xl: 1rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
