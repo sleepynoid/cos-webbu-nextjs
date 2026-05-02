@@ -65,28 +65,7 @@ export default function CostumeDetail() {
               </div>
             </div>
 
-            {/* Vendor Card */}
-            <div className="bg-white border border-gray-200 rounded-xl p-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Avatar className="w-12 h-12">
-                  <AvatarFallback className="bg-brand/10 text-brand font-bold">AC</AvatarFallback>
-                </Avatar>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Anamorfict Cosrent</h3>
-                  <div className="flex items-center text-xs text-gray-500 mt-1">
-                    <MapPin className="w-3 h-3 mr-1" /> Kab. Lebak
-                  </div>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <Button variant="outline" size="sm" className="hidden sm:flex">
-                  <Store className="w-4 h-4 mr-2" /> Kunjungi Toko
-                </Button>
-                <Button variant="outline" size="sm">
-                  <MessageCircle className="w-4 h-4" />
-                </Button>
-              </div>
-            </div>
+
 
             {/* Specs */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4">

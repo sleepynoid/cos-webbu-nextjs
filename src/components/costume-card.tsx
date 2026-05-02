@@ -47,13 +47,7 @@ export function CostumeCard({ costume }: CostumeCardProps) {
           <span className="text-gray-500 font-normal text-[11px] ml-1">/ 3 hari</span>
         </div>
 
-        {/* Vendor Info */}
-        <div className="flex items-center gap-2 pt-2 border-t border-gray-50">
-          <Avatar className="w-5 h-5">
-            <AvatarFallback className="text-[8px] bg-brand/10 text-brand">KC</AvatarFallback>
-          </Avatar>
-          <span className="text-xs text-gray-500 truncate">Keymello Cosplay</span>
-        </div>
+
       </CardContent>
     </Card>
   );
