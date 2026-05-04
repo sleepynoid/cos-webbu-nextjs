@@ -12,9 +12,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns";
 import { id } from "date-fns/locale";
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, Suspense } from "react";
 
-export default function CatalogPage() {
+function CatalogContent() {
   const [activeType, setActiveType] = useState("Semua");
   const [activeGender, setActiveGender] = useState("Semua");
   const [activeSeries, setActiveSeries] = useState("Semua");
@@ -438,5 +438,13 @@ export default function CatalogPage() {
         </div>
       </main>
     </>
+  );
+}
+
+export default function CatalogPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Memuat katalog...</div>}>
+      <CatalogContent />
+    </Suspense>
   );
 }

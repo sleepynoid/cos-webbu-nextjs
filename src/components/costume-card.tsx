@@ -4,13 +4,14 @@ import { Costume } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import { memo } from "react";
 
 interface CostumeCardProps {
   costume: Costume;
   index?: number;
 }
 
-export function CostumeCard({ costume, index = 0 }: CostumeCardProps) {
+export const CostumeCard = memo(function CostumeCard({ costume, index = 0 }: CostumeCardProps) {
   return (
     <Card className="overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow group cursor-pointer bg-white rounded-xl flex flex-col">
       {/* Image Section */}
@@ -51,4 +52,4 @@ export function CostumeCard({ costume, index = 0 }: CostumeCardProps) {
       </CardContent>
     </Card>
   );
-}
+});

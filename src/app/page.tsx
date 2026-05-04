@@ -63,17 +63,17 @@ export default function Home() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h4 className="font-bold text-lg">Jasa Kirim</h4>
-              <div className="grid grid-cols-4 gap-2">
-                {[...Array(8)].map((_, i) => (
-                  <div key={`jasa-${i}`} className="h-6 bg-white/20 rounded" />
+              <div className="flex flex-wrap gap-2 text-[10px] font-bold">
+                {["JNE", "J&T", "SICEPAT", "ANTERAJA", "GOSEND", "GRAB"].map((item) => (
+                  <span key={item} className="px-2 py-1 bg-white/10 rounded border border-white/5">{item}</span>
                 ))}
               </div>
             </div>
             <div className="space-y-4">
               <h4 className="font-bold text-lg">Metode Pembayaran</h4>
-              <div className="grid grid-cols-4 gap-2">
-                {[...Array(8)].map((_, i) => (
-                  <div key={`bayar-${i}`} className="h-6 bg-white/20 rounded" />
+              <div className="flex flex-wrap gap-2 text-[10px] font-bold">
+                {["BCA", "MANDIRI", "BNI", "GOPAY", "OVO", "DANA", "QRIS"].map((item) => (
+                  <span key={item} className="px-2 py-1 bg-white/10 rounded border border-white/5">{item}</span>
                 ))}
               </div>
             </div>
