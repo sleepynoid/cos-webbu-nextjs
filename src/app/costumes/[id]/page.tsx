@@ -32,6 +32,7 @@ export default function CostumeDetail() {
                 src="/products_product-image_1774696640658-NGRK58JW.webp" 
                 alt="Hitori Gotoh Bocchi the Rock! - Kostum & Wig"
                 fill
+                sizes="(max-width: 768px) 100vw, 500px"
                 className="object-cover"
               />
             </div>
@@ -43,6 +44,7 @@ export default function CostumeDetail() {
                     src="/products_product-image_1774696640658-NGRK58JW.webp" 
                     alt="Thumbnail"
                     fill
+                    sizes="80px"
                     className="object-cover"
                   />
                 </div>

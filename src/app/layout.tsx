@@ -14,15 +14,20 @@ export const metadata: Metadata = {
   description: "Platform rental dan jual beli kostum cosplay terpercaya di Indonesia.",
 };
 
+import { Navbar } from "@/components/navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={`${outfit.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        <div className="min-h-screen bg-[#F8F9FA]">
+          <Navbar />
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );

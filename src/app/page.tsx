@@ -1,12 +1,9 @@
-import { Navbar } from "@/components/navbar";
 import { CatalogGrid } from "@/components/catalog-grid";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      
+    <>
       <main className="max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-12">
         {/* Hero Section */}
         <section className="relative w-full aspect-[21/9] md:aspect-[3/1] rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
@@ -14,11 +11,10 @@ export default function Home() {
             src="/Hero.avif" 
             alt="Cosulagi Hero"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
-          {/* Optional overlay if text is hard to read on real image, 
-              but typically Hero.avif has its own branding */}
         </section>
 
         {/* Sections */}
@@ -74,6 +70,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
