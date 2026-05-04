@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <main className="max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-12">
+      <main className="max-w-[1440px] mx-auto px-4 md:px-8 py-6 space-y-12">
         {/* Hero Section */}
         <section className="relative w-full aspect-[21/9] md:aspect-[3/1] rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
           <Image 
@@ -18,14 +18,24 @@ export default function Home() {
         </section>
 
         {/* Sections */}
-        <CatalogGrid title="Produk Terbaru" subtitle="Koleksi kostum terbaru yang baru saja tiba" />
-        <CatalogGrid title="Bocchi The Rock!" />
-        <CatalogGrid title="Love and Deepspace" />
+        <CatalogGrid 
+          title="Produk Terbaru" 
+          subtitle="Koleksi kostum terbaru yang baru saja tiba" 
+          href="/catalog?sort_by=newest"
+        />
+        <CatalogGrid 
+          title="Bocchi The Rock!" 
+          href="/catalog?series=Bocchi+The+Rock!"
+        />
+        <CatalogGrid 
+          title="Love and Deepspace" 
+          href="/catalog?series=Love+and+Deepspace"
+        />
       </main>
 
       {/* Footer */}
       <footer className="mt-20 bg-[#3b4b9b] text-white py-12 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="text-3xl font-black italic tracking-tighter">Cosulagi<span className="text-base font-normal align-top">.id</span></div>
             <p className="text-white/80 text-sm leading-relaxed max-w-xs">

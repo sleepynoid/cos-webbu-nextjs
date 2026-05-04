@@ -21,10 +21,11 @@ function Calendar({
     <DayPicker
       locale={id}
       showOutsideDays={showOutsideDays}
-      className={cn("p-4 w-full flex justify-center", className)}
+      className={cn("p-4 w-full flex justify-center bg-white rounded-2xl shadow-xl", className)}
       classNames={{
-        today: "text-brand font-bold bg-brand/10 rounded-lg",
-        selected: "bg-brand text-white font-bold rounded-lg",
+        day: "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 rounded-lg",
+        day_selected: "bg-brand text-white hover:bg-brand hover:text-white focus:bg-brand focus:text-white rounded-lg",
+        day_today: "bg-brand/10 text-brand font-bold rounded-lg",
         ...classNames,
       }}
 
