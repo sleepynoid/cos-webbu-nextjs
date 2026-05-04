@@ -187,7 +187,7 @@ export default function CatalogPage() {
 
         <div className="flex flex-col md:flex-row gap-6">
           {/* Sidebar - Desktop */}
-          <aside className="hidden md:block w-[280px] flex-shrink-0 sticky top-28 h-[calc(100vh-140px)] overflow-y-auto pr-2 scrollbar-hide">
+          <aside className="hidden md:block w-[280px] flex-shrink-0 sticky top-28 h-[calc(100vh-140px)] overflow-y-auto pr-2">
             <div className="bg-white rounded-2xl shadow-[0_2px_12px_-4px_rgba(0,0,0,0.05)] border border-gray-100 p-6 space-y-8 mb-4">
               
               <div className="flex items-center justify-between">
