@@ -42,3 +42,9 @@ next-env.d.ts
 *.webp
 public/Hero.avif
 caveman/*.png
+.agents/*
+cosulagi_analysis.md
+PLAN.md
+.gitignore
+screenshot.js
+.gitignore
